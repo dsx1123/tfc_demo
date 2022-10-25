@@ -51,7 +51,7 @@ vrfs = [
 
 networks = [
   {
-    name         = "network_web"
+    name         = "network_svc1_web"
     network_id   = 30001
     vlan_id      = 2311
     description  = "network for web tier"
@@ -73,7 +73,7 @@ networks = [
     ]
   },
   {
-    name         = "network_app"
+    name         = "network_svc1_app"
     network_id   = 30002
     vlan_id      = 2312
     description  = "network for app tier"
@@ -95,7 +95,7 @@ networks = [
     ]
   },
   {
-    name         = "network_db"
+    name         = "network_svc1_db"
     network_id   = 30003
     vlan_id      = 2313
     description  = "network for db tier"
