@@ -1,17 +1,15 @@
 ndfc = {
-  url      = "https://173.36.219.24",
+  url      = "https://shdu-ndfc-1.cisco.com",
   platform = "nd"
 }
 
-fabric_name = "fabric-demo"
+fabric_name = "fabric_stage"
 
 inventory = {
   101 = "leaf1",
   102 = "leaf2",
-  103 = "leaf3",
-  104 = "leaf4",
   201 = "spine1",
-  202 = "spine2",
+  103 = "border1",
 }
 
 loopbacks = [
@@ -32,26 +30,6 @@ loopbacks = [
 ]
 
 vpcs = [
-  {
-    vpc_id          = 10
-    switch1_id      = 101
-    switch2_id      = 102
-    mode            = "active"
-    bpdu_guard_flag = "true"
-    mtu             = "jumbo"
-    peer1_members   = ["eth1/1"]
-    peer2_members   = ["eth1/1"]
-  },
-  {
-    vpc_id          = 10
-    switch1_id      = 103
-    switch2_id      = 104
-    mode            = "active"
-    bpdu_guard_flag = "true"
-    mtu             = "jumbo"
-    peer1_members   = ["eth1/1"]
-    peer2_members   = ["eth1/1"]
-  }
 ]
 
 vrfs = [
@@ -67,12 +45,6 @@ vrfs = [
       {
         switch_id = 102
       },
-      {
-        switch_id = 103
-      },
-      {
-        switch_id = 104
-      }
     ]
   }
 ]
@@ -98,18 +70,6 @@ networks = [
           "Port-channel10"
         ]
       },
-      {
-        switch_id = 103
-        switch_ports = [
-          "Port-channel10"
-        ]
-      },
-      {
-        switch_id = 104
-        switch_ports = [
-          "Port-channel10"
-        ]
-      }
     ]
   },
   {
@@ -132,18 +92,6 @@ networks = [
           "Port-channel10"
         ]
       },
-      {
-        switch_id = 103
-        switch_ports = [
-          "Port-channel10"
-        ]
-      },
-      {
-        switch_id = 104
-        switch_ports = [
-          "Port-channel10"
-        ]
-      }
     ]
   },
   {
@@ -166,18 +114,6 @@ networks = [
           "Port-channel10"
         ]
       },
-      {
-        switch_id = 103
-        switch_ports = [
-          "Port-channel10"
-        ]
-      },
-      {
-        switch_id = 104
-        switch_ports = [
-          "Port-channel10"
-        ]
-      }
     ]
   }
 ]
