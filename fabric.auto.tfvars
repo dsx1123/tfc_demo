@@ -9,7 +9,7 @@ inventory = {
   101 = "leaf1",
   102 = "leaf2",
   201 = "spine1",
-  103 = "border1",
+  103 = "leaf3",
 }
 
 loopbacks = [
