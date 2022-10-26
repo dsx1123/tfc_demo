@@ -3,7 +3,7 @@ ndfc = {
   platform = "nd"
 }
 
-fabric_name = "fabric_stage"
+fabric_name = "fabric_n9kv"
 
 inventory = {
   101 = "leaf1",
