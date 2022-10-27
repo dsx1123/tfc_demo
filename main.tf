@@ -1,3 +1,19 @@
+terraform {
+  required_providers {
+    dcnm = {
+      source  = "CiscoDevNet/dcnm"
+      version = "1.2.5"
+    }
+  }
+}
+
+provider "dcnm" {
+  url      = var.ndfc.url
+  username = var.nd_username
+  password = var.nd_username
+  platform = var.ndfc.platform
+}
+
 module "interfaces" {
   source      = "./modules/interface"
   inventory   = var.inventory
